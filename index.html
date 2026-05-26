@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vibecheck - Aesthetic Fashion Brand</title>
+
+  <!-- SEO + Pinterest Optimization -->
+  <meta name="description" content="Vibecheck by Ishika Verma - Aesthetic fashion, streetwear, and trendy style inspiration. Shop vibe-based outfits and order via WhatsApp." />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #0f0f0f, #1c1c2c);
+      color: white;
+    }
+
+    /* NAVBAR */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 25px;
+      background: rgba(255,255,255,0.05);
+      position: sticky;
+      top: 0;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 14px;
+    }
+
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      color: white;
+      background: #ff4d6d;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      margin-left: 10px;
+    }
+
+    /* SECTION */
+    .section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.05);
+      padding: 15px;
+      border-radius: 15px;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .price {
+      color: #ff4d6d;
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      background: #ff4d6d;
+      color: white;
+    }
+
+    /* EMAIL */
+    .email-box {
+      margin-top: 20px;
+    }
+
+    input {
+      padding: 10px;
+      width: 200px;
+      border-radius: 20px;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">VIBECHECK</div>
+  <div>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Define Your Vibe ✨</h1>
+  <p>Vibecheck is not just fashion — it’s confidence, aesthetic, and identity in every outfit.</p>
+
+  <a href="#shop" class="btn">Shop Now</a>
+  <a href="https://wa.me/9779845234061" class="btn whatsapp">WhatsApp Order</a>
+
+  <div class="email-box">
+    <p>Join Vibecheck updates:</p>
+    <input type="email" placeholder="Enter email" />
+    <button onclick="alert('Subscribed!')">Join</button>
+  </div>
+</div>
+
+<!-- SHOP -->
+<div class="section" id="shop">
+  <h2>🔥 Shop Collection</h2>
+  <div class="grid">
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x500/?hoodie" />
+      <h3>Oversized Hoodie</h3>
+      <div class="price">$29.99</div>
+      <button onclick="order('Oversized Hoodie')">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x500/?jacket" />
+      <h3>Street Jacket</h3>
+      <div class="price">$49.99</div>
+      <button onclick="order('Street Jacket')">Order on WhatsApp</button>
+    </div>
+
+    <div class="card">
+      <img src="https://source.unsplash.com/400x500/?tshirt" />
+      <h3>Minimal Tee</h3>
+      <div class="price">$19.99</div>
+      <button onclick="order('Minimal Tee')">Order on WhatsApp</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section" id="about">
+  <h2>About Vibecheck</h2>
+  <p>Created by Ishika Verma, Vibecheck is a fashion brand built on aesthetic expression, confidence, and individuality.</p>
+</div>
+
+<!-- CONTACT -->
+<div class="section" id="contact">
+  <h2>Contact</h2>
+  <p>DM or order via WhatsApp for fast delivery and custom style orders.</p>
+</div>
+
+<script>
+function order(product) {
+  let number = "9779845234061";
+  let message = "Hello, I want to order: " + product + " from Vibecheck";
+  let url = "https://wa.me/" + number + "?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
+}
+</script>
+
+</body>
+</html>
